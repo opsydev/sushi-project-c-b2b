@@ -1,0 +1,28 @@
+<?xml version="1.0"?><?xml-stylesheet type="text/xsl" href="finalorder.xsl"?><order order_date="2013-12-02T22:13:21.591-05:00">
+    <items>
+        <item>
+            <itemNumber>2910h711</itemNumber>
+            <supplier>Toronto</supplier>
+            <Quote>4.198422285183645</Quote>
+            <confirmationNumber>T144a7411
+  </confirmationNumber>
+            <quantity>4</quantity>
+        </item>
+        <item>
+            <itemNumber>1409S702</itemNumber>
+            <supplier>Halifax</supplier>
+            <Quote>4.979976604499476</Quote>
+            <confirmationNumber>T144a740e
+  </confirmationNumber>
+            <quantity>2</quantity>
+        </item>
+        <item>
+            <itemNumber>2910h536</itemNumber>
+            <supplier>Toronto</supplier>
+            <Quote>3.3555779670805133</Quote>
+            <confirmationNumber>T144a7412
+  </confirmationNumber>
+            <quantity>11</quantity>
+        </item>
+    </items>
+</order>
