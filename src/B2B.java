@@ -67,6 +67,9 @@ public class B2B {
 		BufferedReader in = new BufferedReader(new InputStreamReader(yc.getInputStream()));
 		String inputLine;
 		while ((inputLine = in.readLine()) != null) {
+			if(inputLine==null || inputLine.trim().isEmpty()){
+				continue;
+			}
 			String fileURL = FILE_URL + "?fn=" + inputLine;
 
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
