@@ -37,8 +37,8 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
 public class B2B {
-	private final static String LIST_URL = "http://localhost:4413/ProjectC/Admin/getPOList";
-	private final static String FILE_URL = "http://localhost:4413/ProjectC/ViewOrder";
+	private static String LIST_URL;
+	private static String FILE_URL;
 	static List<finalOrderItemBean> finalList = new ArrayList<finalOrderItemBean>();
 	static finalOrderItemBean finalItem;
 	static HashMap<String, String> wsdlMap = new HashMap<String, String>();
@@ -47,16 +47,18 @@ public class B2B {
 		wsdlMap.put("http://red.cse.yorku.ca:4413/axis/YYZ.jws", "Toronto");
 		wsdlMap.put("http://red.cse.yorku.ca:4413/axis/YHZ.jws", "Halifax");
 		wsdlMap.put("http://red.cse.yorku.ca:4413/axis/YVR.jws", "Vancouver");
-		if (args.length < 1) {
+		if (args.length < 2) {
 			throw new Exception("Start date is required");
 		}
-
-		String startDate = args[0];
+		
+		LIST_URL = "http://" + args[0] + "/eFoods/Admin/getPOList";
+		FILE_URL = "http://" + args[0] + "/eFoods/ViewOrder";
+		String startDate = args[1];
 		String endDate = null;
 		String url = LIST_URL + "?start_date=" + startDate;
 
-		if (args.length > 1) {
-			endDate = args[1];
+		if (args.length > 2) {
+			endDate = args[2];
 			url = url + "&end_date=" + endDate;
 		}
 
